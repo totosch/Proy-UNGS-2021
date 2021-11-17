@@ -26,7 +26,7 @@ def main():
         pygame.mixer.music.play()
 
         #Preparar la ventana
-        pygame.display.set_caption("Insomniac!")
+        pygame.display.set_caption("asdasd")
         screen = pygame.display.set_mode((800, 600))
 
         #tiempo total del juego
