@@ -6,17 +6,18 @@ from pygame.locals import *
 from configuracion import *
 from funcionesVACIAS import *
 from extras import *
+from menu import *
 from pygame import mixer
 
 #Funcion principal
 
 def main():
 
-        dificultad = int(input("DIFICULTAD?\n1: FACIL\n2: NORMAL\n3: EXPERTO\n"))
-        if dificultad not in [1,2,3]:
-            print("Dificultad incorrecta")
-            main()
-            return
+        dificultad = 3 #int(input("DIFICULTAD?\n1: FACIL\n2: NORMAL\n3: EXPERTO\n"))
+        #if dificultad not in [1,2,3]:
+        #    print("Dificultad incorrecta")
+        #    main()
+        #    return
         #Centrar la ventana y despues inicializar pygame
         os.environ["SDL_VIDEO_CENTERED"] = "1"
         pygame.init()
@@ -26,7 +27,7 @@ def main():
         pygame.mixer.music.play()
 
         #Preparar la ventana
-        pygame.display.set_caption("asdasd")
+        pygame.display.set_caption("Insomniac!")
         screen = pygame.display.set_mode((800, 600))
 
         #tiempo total del juego

@@ -16,22 +16,22 @@ def cargarListas(lista, listaIzq, listaMedio, listaDer, posicionesIzq , posicion
     col1 = 0
     col2 = 0
     ancho_columna = 260
-    offset_x = 20
+    eje_x = 20
     eje_y = 40
     espacio_entre_letras = 20
     
     for char in palabra_azar:
         numero = random.randint(0,2)
         if numero == 0:
-                posicionesIzq.append([offset_x + ancho_columna*numero + col0*espacio_entre_letras,eje_y])
+                posicionesIzq.append([eje_x + ancho_columna*numero + col0*espacio_entre_letras,eje_y])
                 listaIzq.append(char)
                 col0 += 1               
         if numero == 1:
-                posicionesMedio.append([offset_x + ancho_columna*numero + col1*espacio_entre_letras,eje_y])
+                posicionesMedio.append([eje_x + ancho_columna*numero + col1*espacio_entre_letras,eje_y])
                 listaMedio.append(char)
                 col1 += 1
         if numero == 2:
-                posicionesDer.append([offset_x + ancho_columna*numero + col2*espacio_entre_letras,eje_y])
+                posicionesDer.append([eje_x + ancho_columna*numero + col2*espacio_entre_letras,eje_y])
                 listaDer.append(char)
                 col2 += 1
 #elige una palabra de la lista y la carga en las 3 listas
