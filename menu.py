@@ -7,12 +7,13 @@
 import pygame
 from pygame.locals import *
 from pygame import mixer
+from principal import *
 
 
 class Menu:
     pygame.mixer.init()
     pygame.mixer.music.load("menumusic.mp3")
-    pygame.mixer.music.set_volume(0.3)
+    pygame.mixer.music.set_volume(0.2)
     pygame.mixer.music.play()    
 
     def __init__(self, opciones):
@@ -53,7 +54,7 @@ class Menu:
 
         total = self.total
         indice = 0
-        altura_de_opcion = 30
+        altura_de_opcion = 50
         x = 105
         y = 105
         
@@ -75,12 +76,13 @@ def salir_del_programa():
 
 
 if __name__ == '__main__':
-    
+
+    dificultad = [1,2,3]
     salir = False
     opciones = [
-        ("Facil", 1),
-        ("Normal", 2),
-        ("Dificil", 3),
+        ("Facil", dificultad[0]),
+        ("Normal", dificultad[1]),
+        ("Dificil", dificultad[2]),
         ("Salir", salir_del_programa)
         ]
 
