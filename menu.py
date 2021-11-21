@@ -74,15 +74,23 @@ def salir_del_programa():
     print ("Gracias por jugar!")
     sys.exit(0)
 
+def iniciar_facil():
+    main(1)
+
+def iniciar_normal():
+    main(2)
+
+def iniciar_dificil():
+    main(3)
 
 if __name__ == '__main__':
 
     dificultad = [1,2,3]
     salir = False
     opciones = [
-        ("Facil", dificultad[0]),
-        ("Normal", dificultad[1]),
-        ("Dificil", dificultad[2]),
+        ("Facil", iniciar_facil),
+        ("Normal", iniciar_normal),
+        ("Dificil", iniciar_dificil),
         ("Salir", salir_del_programa)
         ]
 

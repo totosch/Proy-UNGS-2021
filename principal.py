@@ -11,9 +11,9 @@ from pygame import mixer
 
 #Funcion principal
 
-def main():
+def main(dificultad):
 
-        dificultad = 3 #int(input("DIFICULTAD?\n1: FACIL\n2: NORMAL\n3: EXPERTO\n"))
+        #dificultad = 3 #int(input("DIFICULTAD?\n1: FACIL\n2: NORMAL\n3: EXPERTO\n"))
         #if dificultad not in [1,2,3]:
         #    print("Dificultad incorrecta")
         #    main()
@@ -26,7 +26,6 @@ def main():
         pygame.mixer.music.set_volume(0.3)
         pygame.mixer.music.play()
 
-        #Preparar la ventana
         pygame.display.set_caption("Insomniac!")
         screen = pygame.display.set_mode((800, 600))
 
@@ -112,7 +111,3 @@ def main():
                 if e.type == QUIT:
                     pygame.quit()
                     return
-
-##Programa Principal ejecuta Main
-if __name__ == "__main__":
-    main()
